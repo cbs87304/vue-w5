@@ -25,7 +25,7 @@ const app = Vue.createApp({
         }
       },
       methods: {
-        getProducts() {//取得產品遠端資料
+        getProducts() {//取得產品資料
             axios.get(`${apiUrl}/v2/api/${apiPath}/products/all`)
             .then(res => {
              
@@ -41,7 +41,7 @@ const app = Vue.createApp({
         return phoneNumber.test(value) ? true : '請輸入09開頭的正確號碼'
       },
       onSubmit(values) {
-        alert(values);           //送出表單
+        console.log(values);
       },
       mounted() {
         this.getProducts();
