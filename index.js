@@ -38,7 +38,7 @@ const app = Vue.createApp({
       },
       checkPhone(value) {
         const phoneNumber = /^(09)[0-9]{8}$/   //正則表達式來檢查輸入是否符合台灣手機格式
-        return phoneNumber.test(value) ? true : '請輸入手機號碼'
+        return phoneNumber.test(value) ? true : '請輸入09開頭的正確號碼'
       },
       onSubmit(values) {
         alert(values);           //送出表單
