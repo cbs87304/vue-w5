@@ -116,7 +116,7 @@
         </div>
         <!-- 表單驗證 -->
         <div class="my-5 row justify-content-center">
-          <v-form ref="form" class="col-md-6" v-slot="{ errors }" @submit="onSubmit">
+          <v-form v-on:submit="onSubmit" ref="form" class="col-md-6" v-slot="{ errors }" >
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <v-field id="email" name="email" type="email" class="form-control"
