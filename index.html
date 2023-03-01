@@ -133,10 +133,10 @@
             </div>
 
             <div class="mb-3">
-              <label for="phoneNumer" class="form-label">收件人手機號碼</label>
-              <v-field id="phoneNumer" name="phoneNumer" type="text" class="form-control" :class="{ 'is-invalid': errors['phoneNumer'] }"
-                       placeholder="請輸入電話" v-bind:roles="checkPhone"></v-field>
-              <error-message name="phoneNumer" class="invalid-feedback"></error-message>
+              <label for="tel" class="form-label">收件人手機號碼</label>
+              <v-field id="tel" name="手機號碼" type="tel" class="form-control" :class="{ 'is-invalid': errors['手機號碼'] }"
+                       placeholder="請輸入手機號碼" v-bind="checkPhone" rules="required|min:8|max:10|numeric"></v-field>
+              <error-message name="手機號碼" class="invalid-feedback"></error-message>
             </div>
 
             <div class="mb-3">
